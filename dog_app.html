@@ -16271,9 +16271,9 @@ Test Accuracy: 72% (603/836)
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer:</strong> (Three possible points for improvement)</p>
 <p>The algorithm was able to detect from the set of images I passed on to it which were human and which were dogs, it was also able to detect which were neither human nor dogs.</p>
-<p>-&gt; I could use the Adam optimizer instead of SGD, research shows it works better: <a href="http://ruder.io/optimizing-gradient-descent/">http://ruder.io/optimizing-gradient-descent/</a></p>
+<p>-&gt; I could use the Adam optimizer with decoupled weight decay regularization instead of SGD for better results: <a href="https://arxiv.org/abs/1711.05101">https://arxiv.org/abs/1711.05101</a></p>
 <p>-&gt; I could use Resnet-50 as it is proven to give better accuracy compared to VGG-16: <a href="https://arxiv.org/abs/1605.07678">https://arxiv.org/abs/1605.07678</a></p>
-<p>-&gt; I could calculate the means and standard deviations dynamically rather than statically by using np.mean and np.std rather than the static values I used.  <a href="https://discuss.pytorch.org/t/normalization-in-the-mnist-example/457/12">https://discuss.pytorch.org/t/normalization-in-the-mnist-example/457/12</a></p>
+<p>-&gt; To ensure that humans are not classified as dogs I could use alternative face recognition technologies such as MTCNN <a href="https://arxiv.org/abs/1804.01753">https://arxiv.org/abs/1804.01753</a> or <a href="https://link.springer.com/chapter/10.1007/978-981-10-8639-7_20">https://link.springer.com/chapter/10.1007/978-981-10-8639-7_20</a></p>
 
 </div>
 </div>
